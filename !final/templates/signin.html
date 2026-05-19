@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Final project 2</title>
+</head>
+<body>
+    <div class="main">
+        <main>
+            <form action="/sign_in" method="POST">
+                <p>Create an account</p>
+                <input name="email" id="hash1" type="email" placeholder="Enter your email">
+                <input name="password" id="hash2" class="pw" type="password" placeholder="Enter password">
+                <input id="buttonw" class="btn" type="submit" placeholder="Sign">
+                <a href="/">Log In</a> 
+            </form>
+        </main>
+    </div>
+</body>
+</html>
