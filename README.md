@@ -1,16 +1,18 @@
 # 🗂️ Personal Portfolio
 
-A personal portfolio website designed to showcase my projects, skills, and background as a developer.
+Welcome to my personal portfolio, where you will be able to see all my projects.
 
 ---
 
 ## 🛠️ Built With
 
+- First project Log in/sign in form with back end logic and sql database stockage.
+
 | Technology | Usage |
 |------------|-------|
-| ![Python] | Scripts & backend logic |
-| ![HTML] | Page structure |
-| ![CSS] | Styling & layout |
+| [Python] | Scripts & backend logic made from scratch|
+| [HTML] | Page structure made from scratch | 
+| [CSS] | Styling & layout made by AI |
 
 ---
 
@@ -18,7 +20,7 @@ A personal portfolio website designed to showcase my projects, skills, and backg
 
 ```
 Portfolio/
-└── !final/          # Production-ready version of the portfolio
+└── !final/         
 ```
 
 ---
