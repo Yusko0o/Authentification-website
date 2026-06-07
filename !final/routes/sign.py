@@ -10,29 +10,29 @@ DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "users.
 @sign.route("/sign_in", methods=["POST"])
 def sign_in():
     try:
-        email = request.form.get("email")
-        password = request.form.get("password")
+        email = request.form.get("email") # email request
+        password = request.form.get("password") # password request
 
-        if not email or not password:
+        if not email or not password: # error handling
             return "Missing email or password"
 
-        hashPassword = h.sha1(password.encode()).hexdigest()
+        hashPassword = h.sha1(password.encode()).hexdigest() # password hashing
 
-        connect = sqlite3.connect(DB_PATH)
+        connect = sqlite3.connect(DB_PATH) # connection database
         cursor= connect.cursor()
 
-        cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
+        cursor.execute("SELECT * FROM users WHERE email = ?", (email,)) # selecting labels database
         existing = cursor.fetchone()
 
-        if existing:
+        if existing: 
             return "Email already exisits"
 
         cursor.execute(
-            "INSERT INTO users (email, password) VALUES (?, ?)",
+            "INSERT INTO users (email, password) VALUES (?, ?)", # inserting into databse
             (email, hashPassword)
         )
 
-        connect.commit()
+        connect.commit() # closing databse
         connect.close()
 
         return "User created ! You can now log in !"
