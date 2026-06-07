@@ -29,7 +29,6 @@ Portfolio/
 
 - 🧑‍💻 Back-end project
 - 📂 Password hashing
-- 📬 discord : disappearzs
 - 🎨 Clean and responsive design
 
 ---
