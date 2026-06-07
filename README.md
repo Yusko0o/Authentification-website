@@ -64,6 +64,7 @@ Then go to [http://localhost:8000](http://localhost:8000).
 ---
 
 ![Log in view](image/login.png)
+![code](image/code.png)
 
 *Made with ❤️ and a lot of coffee ☕*
 *No vibe coding ❤️*
