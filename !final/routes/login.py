@@ -14,16 +14,16 @@ def login_page():
 @auth.route("/log_in", methods=["POST"])
 def login():
     try:
-        email = request.form.get("email")
-        password = request.form.get("password")
+        email = request.form.get("email") # email request
+        password = request.form.get("password") # password request
 
-        hashPassword = h.sha1(password.encode()).hexdigest()
+        hashPassword = h.sha1(password.encode()).hexdigest() # password getting hashed
 
-        connect = sqlite3.connect(DB_PATH)
+        connect = sqlite3.connect(DB_PATH) # connecting to the database
         cursor= connect.cursor()
 
         cursor.execute(
-            "SELECT password FROM users WHERE email = ?",
+            "SELECT password FROM users WHERE email = ?", # selecting the labels in the database
             (email,)
         )
 
@@ -33,7 +33,7 @@ def login():
         if not user:
             return "No account"
 
-        if user[0] == hashPassword:
+        if user[0] == hashPassword: # hashed password getting compared with other hashed password
             return "You're logged in !"
         else:
             return "Incorrect !"
